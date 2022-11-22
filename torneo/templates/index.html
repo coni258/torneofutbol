@@ -11,6 +11,7 @@
 <body>
   <h1>THIS IS A TOURNAMENT</h1>
 
+  
   <form action="{% url 'create_team' %}" method="POST">
     {% csrf_token %}
     <label for="nombre">Nombre equipo:</label>
