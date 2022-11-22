@@ -29,4 +29,3 @@ class Staff(models.Model):
     edad=models.IntegerField()
     cargo=models.CharField(max_length=50)
     abr_cargo=models.CharField(max_length=20)
-''

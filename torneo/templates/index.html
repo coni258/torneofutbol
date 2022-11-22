@@ -11,10 +11,21 @@
 <body>
   <h1>THIS IS A TOURNAMENT</h1>
 
-  <form action="">
-    <input type="text" name="title" placeholder="Escribe un titulo">
+  <form action="{% url 'create_team' %}" method="POST">
+    {% csrf_token %}
+    <label for="nombre">Nombre equipo:</label>
+    <input type="text" name="nombre" placeholder="Ingrese nombre">
+    
+    <label for="abreviatura">Abreviatura equipo:</label>
+    <input type="text"  name="abreviatura" placeholder="Ingrese abreviatura">
 
+    <label for="aniofundacion">Año de fundacion:</label>
+    <input type="number" name="aniofundacion" placeholder="Ingrese anio de fundacion">
+  
+    <button type="submit" class="btn btn-primary">Agregar equipo</button>
   </form>
+  <h1>Equipos</h1>
+  <h1>Jugadores</h1>
 </body>
   
 
