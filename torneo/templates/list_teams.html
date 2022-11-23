@@ -16,6 +16,14 @@
         <div class="card-body">
           <h5 class="card-title">{{equipo.nombre}}</h5>
           <p class="card-text">Este equipo se fundó en: {{equipo.aniofundacion}}</p>
+          <form action="{% url 'player_form' equipo.id%}" method="POST">
+            {% csrf_token %}
+            <button class="btn btn-success">Agregar jugador</button>
+          </form>
+          <form action="{% url 'delete_team' equipo.id %}" method="POST">
+            {% csrf_token %}
+            <button class="btn btn-danger">Eliminar equipo</button>
+          </form>
         </div>
       </div>
       {% empty %}

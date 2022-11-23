@@ -20,6 +20,7 @@ class Jugadores(models.Model):
     posicion=models.CharField(max_length=50)
     abr_posicion=models.CharField(max_length=20)
     num_dorsal=models.IntegerField()
+    equipo_id=models.IntegerField() 
 
 
 class Staff(models.Model):
@@ -29,3 +30,4 @@ class Staff(models.Model):
     edad=models.IntegerField()
     cargo=models.CharField(max_length=50)
     abr_cargo=models.CharField(max_length=20)
+    equipo_id=models.IntegerField() 
