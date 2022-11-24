@@ -31,3 +31,4 @@ class Staff(models.Model):
     cargo=models.CharField(max_length=50)
     abr_cargo=models.CharField(max_length=20)
     equipo_id=models.IntegerField() 
+

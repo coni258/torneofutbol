@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 <body>
-  <form class="form-inline" action="{% url 'create_staff' equipo_id%}" method="POST">
-    {% csrf_token %}
+  <form class="form-inline" action="{% url 'create_staff'%}" method="POST">
+    {% csrf_token %} 
     <div class="form-group mb-2">
       <label class="sr-only">: Numero de pasasporte </label>
     </div>
@@ -28,6 +28,13 @@
     <div class="col-2">
       <input type="text" class="form-control" name="nacionalidad" placeholder="Ingrese nacionalidad">
     </div>
+    <div class="form-group mb-2">
+      <label class="sr-only">Cargo: </label>
+    </div>
+    <div class="col-2">
+      <input type="number" class="form-control" name="Cargo" placeholder="Ingrese cargo">
+    </div>
+
     <div class="col-2" style="padding-top: 20px">
       <button type="submit" class="btn btn-primary ">Agregar Staff</button>
     </div>
