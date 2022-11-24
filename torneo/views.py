@@ -29,7 +29,7 @@ def deleteteam(request, equipo_id):
 
 
 def createplayer(request, equipo_id):
-  jugador = Jugadores(num_pasaporte=request.POST['num_pasaporte'], nombre=request.POST['nombre'], nacionalidad=request.POST['nacionalidad'], edad=request.POST['edad'], posicion=request.POST['posicion'], abr_posicion=request.POST['abr_posicion'], num_dorsal=request.POST['num_dorsal'], equipo_id = equipo_id)
+  jugador = Jugadores(num_pasaporte=request.POST['num_pasaporte'], nombre=request.POST['nombre'], nacionalidad=request.POST['nacionalidad'], edad=request.POST['edad'], posicion=request.POST['posicion'], abr_posicion=request.POST['abr_posicion'], cargo=request.POST['cargo'], abr_cargo=request.POST['abr_cargo'],num_dorsal=request.POST['num_dorsal'], equipo_id = equipo_id)
   jugador.save()
   return redirect ("/list/teams")
 
